@@ -1,5 +1,7 @@
-noStroke();
-fill(255, 255, 184);
+void setup() {
+  size(400, 400);
+}
+
 var numStars = 500;
 var starSize = 2;
 
@@ -13,7 +15,9 @@ for (var i = 0; i < numStars; i++) {
 var shooting = floor(random(0, numStars));
 var shootingYSpeed = 3;
 
-var draw = function() {
+void draw() {
+    noStroke();
+    fill(255, 255, 184);
     background(0, 4, 56);
     for (var x = 0; x < numStars; x++) {
         ellipse(myStarsX[x], myStarsY[x], starSize, starSize);
