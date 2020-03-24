@@ -1,11 +1,3 @@
-//BASICS = 'https://docs.google.com/spreadsheets/d/1S1cfyvfCz24ZYhNfutgEEfNcas_MpETWK-kie8O65Iw/edit?usp=sharing';
-//BASICS_ID = '1S1cfyvfCz24ZYhNfutgEEfNcas_MpETWK-kie8O65Iw';
-
-
-//https://docs.google.com/spreadsheets/d/e/2PACX-1vSmUvmuRHAbkX-z5g9X9GhQarRHAbl3eLAdsloGgnBqE7r4dlybe88XJUYJLtH4SFO68nF5hjUPm6jy/pubhtml?gid=0&single=true
-
-//https://spreadsheets.google.com/feeds/cells/  /1/public/values?alt=json-in-script
-
 belts = [];
 basicsByBelt = {};
 
@@ -33,12 +25,15 @@ function loadData(json) {
 
 function generate(rank, itemCount) {
   var beltI = belts.indexOf(rank);
-  var combo = '';
-  for (var i = 0; i < itemCount; i++) {
+  var selected = []
+  while (selected.length < itemCount) {
     var color = belts[Math.floor(Math.random() * beltI)];
     console.log(color);
     var rand = Math.floor(Math.random() * basicsByBelt[color].length);
-    combo += basicsByBelt[color][rand] + '<br/>';
+    var newBasic = basicsByBelt[color][rand];
+    if (selected.indexOf(newBasic) === -1) {
+      selected.push(newBasic);
+    }
   }
-  $('#combo').html(combo);
+  $('#combo').html(selected.join('<br>'));
 }
