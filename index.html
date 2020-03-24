@@ -4,10 +4,29 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="src/combos.js"></script>
     <script src="https://spreadsheets.google.com/feeds/cells/1S1cfyvfCz24ZYhNfutgEEfNcas_MpETWK-kie8O65Iw/1/public/values?alt=json-in-script&callback=loadData"></script>
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+    <style>
+      .white
+    </style>
   </head>
   <body>
-    <h1>Blue Belt Combo Generator!</h1>
-    <button onclick="generate('Blue', 3);">New Combo!</button>
-    <div id="combo" />
+    <div class="container">
+      <div class="is-center">
+        <h1>Seven Combo Generator!</h1>
+      </div>
+      <div class="row">
+        <button class="col button outline" style="background-color:white" onclick="generate('White', 2);">White Belt</button>
+        <button class="col button outline" style="background-color:orange" onclick="generate('Orange', 3);">Orange Belt</button>
+        <button class="col button outline" style="background-color:#d7d" onclick="generate('Purple', 3);">Purple Belt</button>
+        <button class="col button outline" style="background-color:#58e" onclick="generate('Blue', 3);">Blue Belt</button>
+        <button class="col button outline" style="background-color:#3f5" onclick="generate('Green', 3);">Green Belt</button>
+        <button class="col button outline" style="background-color:#a50" onclick="generate('Brown', 3);">Brown Black</button>
+      </div>
+      <div class="row is-center">
+        <div class="col-6">
+          <div class="card" id="combo" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
