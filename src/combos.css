@@ -1,0 +1,47 @@
+:root {
+    --color-primary: #302425;
+    --color-lightGrey: #F7D5E0;
+    --color-grey: #78252C;
+    --color-darkGrey: var(--color-primary);
+}
+
+
+////////////////////////////////////////////////////////////////
+//  Elements.
+////////////////////////////////////////////////////////////////
+
+a {
+    padding: 2px;
+}
+
+h1 {
+    color: var(--color-primary);
+}
+
+summary {
+    cursor: pointer;
+}
+
+
+////////////////////////////////////////////////////////////////
+//  Classes.
+////////////////////////////////////////////////////////////////
+
+.backbox {
+    opacity: 0.85;
+}
+
+.credit {
+    position: absolute;
+    bottom: 0;
+}
+
+.sakura {
+    background-image: url('images/sakura_PNG23.png');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
