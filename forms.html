@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="src/forms.js"></script>
+    <link rel="stylesheet" href="src/chota.min.css">
+    <link rel="stylesheet" href="src/combos.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  </head>
+
+  <body onLoad="setSettings();">
+    <div class="sakura">
+      <div class="container">
+
+        <div class="is-center">
+          <h1 class="card text-center backbox">Seven Form Generator!</h1>
+        </div>
+
+        <div class="row is-center">
+          <div class="col-6">
+            <div class="card backbox is-center" style="font-size: 500%; padding: 50px;" id="form">Get Ready...</div>
+          </div>
+        </div>
+        <div class="row is-center">
+          <button class="col-2 button outline" style="background-color:white; font-size: 300%;" onclick="go();">Go!</button>
+        </div>
+
+        <div class="row is-left">
+          <div class="col-6">
+            <details class="card backbox dropdown" id="settings">
+              <summary>Settings</summary>
+              <div class="card" id="numTechniques">
+                <header><h4>TODO: Update</h4></header>
+                <div class="is-center">
+                  <a class="button">1</a>
+                  <a class="button">2</a>
+                  <a class="button">3</a>
+                  <a class="button">4</a>
+                  <a class="button">5</a>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="credit">
+          <footer class="is-left">
+            <a href="https://github.com/jenil/chota">CSS from chota</a> |
+            <a href="https://pngimg.com/download/49807">Sakura image from pngimg.com</a> |
+            <a href="https://github.com/anybodys/anybodys.github.io">source code</a>
+          </footer>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
