@@ -1,28 +1,3 @@
-belts = [];
-basicsByBelt = {};
-
-
-function loadData(json) {
-  var ss = json.feed.entry;
-  for(var i=0; i<ss.length; i++) {
-    var cell = ss[i]["gs$cell"];
-
-    if (cell.row === '1') {
-      belts.push(cell['$t']);
-      continue;
-    }
-
-    var beltRank = belts[cell.col - 1];
-    var basics = basicsByBelt[beltRank];
-    if (basics === undefined) {
-      basics = [];
-      basicsByBelt[beltRank] = basics;
-    }
-    basics.push(cell['$t']);
-  }
-}
-
-
 function generate(rank) {
   var beltI = belts.indexOf(rank);
   var selected = []
